@@ -1,0 +1,55 @@
+/*
+  globals.css
+  -----------
+  Estilos globales del portafolio usando Tailwind v4.
+
+  En Tailwind v4 la configuración ya NO vive en un tailwind.config.ts
+  (como ocurría en v3), sino directamente en CSS usando la directiva
+  @import "tailwindcss" + el bloque @theme.
+
+  @theme define los "design tokens" (colores, fuentes, etc.) con los
+  que después generamos clases tailwind. Por ejemplo, al declarar
+  `--color-accent` podemos usar la clase `bg-accent`, `text-accent`,
+  `border-accent`, etc.
+*/
+
+/* 1) Importa el framework completo de Tailwind */
+@import "tailwindcss";
+
+/* 2) Tokens personalizados del tema ayudado */
+@theme {
+  /* Color de acento del portafolio (esmeralda). Se usa como bg-accent, text-accent... */
+  --color-accent: #10b981;
+  /* Variante más clara del acento para hover */
+  --color-accent-light: #34d399;
+
+  /* Fondo principal (casi negro, tono zinc de Tailwind) */
+  --color-background: #09090b;
+
+  /* Fondo de las "cards" (superficies un poco más claras que el fondo) */
+  --color-surface: #18181b;
+
+  /* Color de contorno sutil de las cards / separadores */
+  --color-border: #27272a;
+
+  /* Tipo de letra secundaria: usa la variable que expone next/font */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* 3) Ajustes globales de la página */
+html {
+  /* Desplazamiento suave al navegar por los anclajes (#sobre-mi, etc.) */
+  scroll-behavior: smooth;
+}
+
+body {
+  /* El cuerpo ocupa toda la altura para que el footer quede abajo */
+  @apply min-h-full bg-background text-zinc-200 font-sans antialiased;
+}
+
+/* 4) Selección de texto con color acento */
+::selection {
+  background-color: var(--color-accent);
+  color: #09090b;
+}
