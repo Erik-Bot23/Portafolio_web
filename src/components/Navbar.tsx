@@ -14,6 +14,7 @@
 
 import { useState } from "react";
 import { site } from "@/data/site";
+import Image from "next/image";
 
 /* Lista de secciones a las que enlaza la barra (evita repetir HTML) */
 const NAV_LINKS = [
@@ -33,8 +34,15 @@ export default function Navbar() {
         className="mx-auto flex h-16 max-w-5xl items-center justify-between px-4 sm:px-6"
       >
         {/* Logo / nombre del autor: hace scroll a la parte superior */}
-        <a href="#inicio" className="font-mono text-sm font-semibold text-zinc-100">
-          {site.name.split(" ")[0]}.dev
+        <a href="#inicio" className="relative block h-8 w-8">
+          {/*{site.name.split(" ")[0]}.dev*/}
+          <Image
+            src="/icons/Designer.png"
+            alt={`Logo de ${site.name}`}
+            fill
+            sizes="32px"
+            className="rounded-md object-contain"
+          />
         </a>
 
         {/* Menú de escritorio (oculto en pantallas pequeñas) */}

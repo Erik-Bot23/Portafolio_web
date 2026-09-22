@@ -19,7 +19,7 @@ export default function Projects() {
        scroll-mt evita que la navbar fija tape el título al navegar. */
     <section id="proyectos" className="mx-auto max-w-5xl scroll-mt-24 px-4 py-20 sm:px-6">
       <h2 className="mb-10 font-mono text-sm uppercase tracking-widest text-accent">
-        {"// Proyectos"}
+        {"Proyectos"}
       </h2>
 
       {/*

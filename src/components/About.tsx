@@ -31,7 +31,7 @@ const SKILLS = [
 
 /* Lo que estás buscando laboralmente */
 const GOALS = [
-  "Primera experiencia como desarrollador junior (backend o frontend).",
+  "Primera experiencia como desarrollador junior (backend).",
   "Trabajar en un equipo donde pueda aprender de perfiles senior.",
   "Seguirme especializando en el ecosistema Java (Spring Boot) y TypeScript.",
   "Aportar proyectos en producción hechos con buenas prácticas.",
@@ -43,7 +43,7 @@ export default function About() {
     <section id="sobre-mi" className="mx-auto max-w-5xl scroll-mt-24 px-4 py-20 sm:px-6">
       {/* Título de sección */}
       <h2 className="mb-10 font-mono text-sm uppercase tracking-widest text-accent">
-        {"// Sobre mí"}
+        {"Sobre mí"}
       </h2>
 
       <div className="grid gap-10 md:grid-cols-2">
@@ -57,9 +57,9 @@ export default function About() {
           </h3>
           <ul className="space-y-2">
             {GOALS.map((goal) => (
-              <li key={goal} className="flex gap-2 text-sm leading-6 text-zinc-400">
+              <li key={goal} className="flex items-start gap-2 text-sm leading-6 text-zinc-400">
                 {/* Indicador bullet con acento */}
-                <span aria-hidden="true" className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                 {goal}
               </li>
             ))}

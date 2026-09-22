@@ -23,7 +23,7 @@ export type SiteConfig = {
 
 export const site: SiteConfig = {
   // Tu nombre (módificalo)
-  name: "Tu Nombre Apellido",
+  name: "Erik Jarquín Sánchez",
 
   // Rol que buscas / que defines como junior
   role: "Desarrollador Junior Full Stack",
@@ -35,10 +35,10 @@ export const site: SiteConfig = {
   // Párrafo "Sobre mí": quién eres y qué buscas.
   // Esto es lo que leen los reclutadores, así que sé concreto.
   summary:
-    "Soy un desarrollador junior apasionado por construir aplicaciones completas, del backend al frontend. Terminé un proyecto full-stack con Spring Boot, Angular y PostgreSQL trabajando con arquitectura de microservicios. Busco mi primera oportunidad como junior en backend o frontend, donde pueda seguir aprendiendo y aportando desde el día uno.",
+    "Soy un desarrollador junior apasionado por construir aplicaciones completas, del backend al frontend. Terminé un proyecto full-stack con Spring Boot, Angular y PostgreSQL trabajando con arquitectura orientada a usar en un futuro microservicios. Busco mi primera oportunidad como junior en backend o full stack, donde pueda seguir aprendiendo y aportando desde el día uno.",
 
   // Correo de contacto
-  email: "tu.correo@gmail.com",
+  email: "erikjarquin20@gmail.com",
 
   // Links a tus redes (sustituye por los tuyos)
   github: "https://github.com/tu-usuario",

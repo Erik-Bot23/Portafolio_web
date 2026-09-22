@@ -14,7 +14,7 @@ export default function Contact() {
     /* id="contacto" es el destino del enlace #contacto de la navbar */
     <section id="contacto" className="mx-auto max-w-5xl scroll-mt-24 px-4 py-20 sm:px-6">
       <h2 className="mb-10 font-mono text-sm uppercase tracking-widest text-accent">
-        {"// Contacto"}
+        {"Contacto"}
       </h2>
 
       <div className="rounded-2xl border border-border bg-surface p-8 text-center sm:p-12">

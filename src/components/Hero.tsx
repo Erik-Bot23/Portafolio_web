@@ -12,7 +12,7 @@ import { site } from "@/data/site";
 export default function Hero() {
   return (
     /* id="inicio" lo usa el logo de la Navbar para hacer scroll arriba */
-    <section id="inicio" className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-28">
+    <section id="inicio" className="relative overflow-hidden pt-28 pb-20 sm:pt-36 sm:pb-20">
       {/* Círculo decorativo de fondo (sutil) */}
       <div
         aria-hidden="true"
@@ -20,7 +20,7 @@ export default function Hero() {
       />
       <div className="mx-auto max-w-5xl px-4 sm:px-6">
         {/* "Hola, soy..." en pequeño */}
-        <p className="mb-3 font-mono text-sm text-accent">Hola, soy</p>
+        <p className="mb-3 font-mono text-sm text-accent">Hola, soy </p>
 
         {/* Nombre (grande) */}
         <h1 className="text-4xl font-bold tracking-tight text-zinc-50 sm:text-6xl">
@@ -36,22 +36,6 @@ export default function Hero() {
         <p className="mt-3 max-w-2xl text-base leading-7 text-zinc-400">
           {site.tagline}
         </p>
-
-        {/* Botones de acción: ver proyectos + descargar/ver redes */}
-        <div className="mt-8 flex flex-wrap gap-4">
-          <a
-            href="#proyectos"
-            className="inline-flex h-11 items-center justify-center rounded-lg bg-accent px-6 text-sm font-semibold text-zinc-950 transition-colors hover:bg-accent-light"
-          >
-            Ver mis proyectos
-          </a>
-          <a
-            href="#contacto"
-            className="inline-flex h-11 items-center justify-center rounded-lg border border-border px-6 text-sm font-semibold text-zinc-200 transition-colors hover:border-accent hover:text-accent"
-          >
-            Hablemos
-          </a>
-        </div>
       </div>
     </section>
   );
