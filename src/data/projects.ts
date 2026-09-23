@@ -36,7 +36,7 @@ export const projects: Project[] = [
       Los reclutadores valoran "qué hace" más que la lista de tecnologías.
     */
     description:
-      "Aplicación full-stack para gestionar pedidos construida con una arquitectura de microservicios (Spring Cloud, Eureka) en el backend, una SPA en Angular como cliente y PostgreSQL como base de datos. Implementé autenticación, CRUD y comunicación entre servicios por HTTP.",
+      "Aplicación full-stack para gestionar compras construida con una arquitectura MVC con Spring Boot en el backend, una SPA en Angular como cliente y PostgreSQL como base de datos. Implementé autenticación, CRUD y comunicación entre servicios por HTTP.",
     tech: ["Spring Boot", "Java", "Angular", "TypeScript", "PostgreSQL", "Docker"],
     // Reemplaza con tu repositorio y tu demo (si la tienes)
     github: "https://github.com/tu-usuario/sistema-pedidos",
