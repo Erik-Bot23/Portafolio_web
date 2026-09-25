@@ -7,6 +7,8 @@
   enlaces directos a LinkedIn y GitHub (los que los reclutadores
   van a querer ver sí o sí).
 */
+//Holla, primer commit
+
 import { site } from "@/data/site";
 
 export default function Contact() {
