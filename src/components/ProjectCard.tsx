@@ -32,12 +32,14 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         )}
       </div>
 
-      {/* Frase corta del proyecto */}
-      <p className="font-mono text-xs text-zinc-500">{project.tagline}</p>
-
       {/* Descripción */}
       <p className="mt-3 flex-1 text-sm leading-6 text-zinc-400">
         {project.description}
+      </p>
+
+      {/*Detalles de la nueva implementación */}
+      <p className="mt-3 flex-1 text-sm leading-6 text-zinc-400">
+        {project.details1}
       </p>
 
       {/* Tecnologías usadas (se renderizan con map sobre el array) */}
@@ -72,6 +74,26 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             className="text-sm font-medium text-accent transition-colors hover:text-accent-light"
           >
             Demo en vivo →
+          </a>
+        )}
+        {project.demo1 && (
+          <a
+            href={project.demo1}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-accent transition-colors hover:text-accent-light"
+          >
+            Ventas locales →
+          </a>
+        )}
+        {project.demo2 && (
+          <a
+            href={project.demo2}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-accent transition-colors hover:text-accent-light"
+          >
+            Ventas en línea →
           </a>
         )}
       </div>

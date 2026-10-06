@@ -25,7 +25,6 @@ import { site } from "@/data/site";
   Fuentes servidas desde NUESTRO servidor (self-hosted) con
   next/font/local. No dependemos de Google Fonts en tiempo de build
   ni de terceros en el navegador, lo que hace el build offline-safe
-  (útil si tu red no llega a fonts.googleapis.com).
 
   Las fuentes WOFF2 versionadas están en src/fonts.
 */
