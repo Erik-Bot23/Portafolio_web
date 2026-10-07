@@ -17,21 +17,23 @@ const SKILLS = [
   "Spring Boot",
   "Angular",
   "TypeScript",
-  "React",
   "Next.js",
   "PostgreSQL",
+  "Supabase",
   "JavaScript",
+  "Python",
   "HTML",
   "CSS",
   "Tailwind CSS",
   "Git",
+  "GitHub",
   "Docker",
-  "Python",
+  "Postman"
 ];
 
 /* Lo que estás buscando laboralmente */
 const GOALS = [
-  "Primera experiencia como desarrollador junior (backend).",
+  "Experiencia como desarrollador junior backend o full stack.",
   "Trabajar en un equipo donde pueda aprender de perfiles senior.",
   "Seguirme especializando en el ecosistema Java (Spring Boot) y TypeScript.",
   "Aportar proyectos en producción hechos con buenas prácticas.",

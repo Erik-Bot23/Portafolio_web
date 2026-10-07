@@ -20,27 +20,38 @@ export type Project = {
   title: string;
   tagline: string;
   description: string;
+  details1?: string;
+  details2?: string;
   tech: string[];
   github?: string;
   demo?: string;
+  demo1?: string;
+  demo2?: string;
   featured?: boolean;
 };
 
 export const projects: Project[] = [
   {
-    id: "system-order",
-    title: "Sistema de Pedidos (Microservicios)",
-    tagline: "Full-stack · Spring Boot + Angular + PostgreSQL",
+    id: "system-sales",
+    title: "ERP de ventas para tiendas (POS)",
+    tagline: "Spring Boot + Angular + PostgreSQL (en Supabase) + Next.js",
     /*
       Describe qué hace, qué aprendiste y qué retos resolviste.
       Los reclutadores valoran "qué hace" más que la lista de tecnologías.
     */
     description:
-      "Aplicación full-stack para gestionar compras construida con una arquitectura MVC con Spring Boot en el backend, una SPA en Angular como cliente y PostgreSQL como base de datos. Implementé autenticación, CRUD y comunicación entre servicios por HTTP.",
-    tech: ["Spring Boot", "Java", "Angular", "TypeScript", "PostgreSQL", "Docker"],
+      "Aplicación para gestionar ventas construida con una arquitectura MVC con Spring Boot en el backend, " +
+      "una SPA en Angular como cliente para la administración de la tienda y PostgreSQL como base de datos alojada en Supabase. Implementé autenticación, CRUD y comunicación entre servicios por HTTP.",
+    /**
+     * Detalles de lo que se esta implementando en el proyecto.
+     */
+    details1: "Se esta implementando un frontend con Next.js para compras en línea enfocado al cliente, mientras que el frontend con Angular es para la administración de la tienda. " + 
+    "Se usará el mismo backend con Spring Boot y la misma base de datos en Supabase para ambos frontends, habrá diferentes rutas apuntando a cada uno.",
+    tech: ["Spring Boot", "Java", "Angular", "TypeScript", "PostgreSQL", "Docker", "Supabase", "Next.js"],
     // Reemplaza con tu repositorio y tu demo (si la tienes)
-    github: "https://github.com/tu-usuario/sistema-pedidos",
-    demo: undefined,
+    github: "https://github.com/Erik-Bot23",
+    demo1: "https://comprasangular.netlify.app",
+    demo2: "https://comprasangular.netlify.app",
     featured: true,
   },
   {
@@ -48,19 +59,36 @@ export const projects: Project[] = [
     title: "Página Web para mi Novia",
     tagline: "Frontend · HTML + CSS + JavaScript",
     description:
-      "Página web personal dedicada a mi novia hecha con JavaScript, HTML y CSS puro. Incluye animaciones, detalles interactivos y diseño responsive. Me sirvió para practicar manipulación del DOM, animaciones con CSS y buenas prácticas de diseño web.",
+      "Página web personal dedicada a mi novia hecha con JavaScript, HTML y CSS puro. Incluye animaciones, " +
+      "detalles interactivos y diseño responsive. Me sirvió para practicar manipulación del DOM, animaciones con CSS y buenas prácticas de diseño web.",
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/tu-usuario/pagina-novia",
+    github: "https://github.com/Erik-Bot23",
     demo: "https://tu-usuario.github.io/pagina-novia",
   },
   {
-    id: "script-python",
-    title: "Automatización con Python",
-    tagline: "Scripting · Python",
+    id: "agenda-python",
+    title: "Agenda con Python",
+    tagline: "Python y postgreSQL",
     description:
-      "Pequeño proyecto en Python para automatizar una tarea repetitiva (procesamiento/organización de archivos y generación de reportes). Refuerza mi base en lógica, manejo de archivos y escritura de scripts limpios y reutilizables.",
-    tech: ["Python"],
-    github: "https://github.com/tu-usuario/script-python",
-    demo: undefined,
+      "Pequeño proyecto en Python para agendar contactos y eventos, con almacenamiento en una base de datos PostgreSQL. Incluye funcionalidades de agregar, editar, eliminar y listar contactos y eventos. Me ayudó a mejorar mis habilidades en Python y SQL.",
+    tech: ["Python", "PostgreSQL"],
+    github: "https://github.com/Erik-Bot23",
   },
+  {
+    id: "system-order",
+    title: "ERP de ventas para establecimiento de comida (POS)",
+    tagline: "Spring Boot + Angular + PostgreSQL (en Supabase) + Next.js",
+    description:
+      "Esta aplicación esta en proceso, se usará para gestionar ventas enfocadas a un establecimiento de comida y tomará como base el proyecto de ventas para tienda, " +
+      "el cual se refactorizará para adaptarse a las necesidades de un restaurante; tanto el backend con Spring Boot como el frontend con Angular. Y se implementará un frontend con Next.js para compras en línea enfocado al cliente." +
+      " mientras que el frontend con Angular seguirá siendo para la administración, en esta caso del restaurante.",
+
+    details2: "Se esta implmentando un frontend con Next.js para compras en línea enfocado al cliente, mientras que el frontend con Angular es para la administración de la tienda. " + 
+    "Se usará el mismo backend con Spring Boot y la misma base de datos en Supabase para ambos frontends, pero habrá diferentes rutas apuntando a cada uno.",
+    tech: ["Spring Boot", "Java", "Angular", "TypeScript", "PostgreSQL", "Docker", "Supabase", "Next.js"],
+    github: "https://github.com/Erik-Bot23",
+    demo1: "https://comprasangular.netlify.app",
+    demo2: "https://comprasangular.netlify.app",
+    featured: true,
+  }, 
 ];

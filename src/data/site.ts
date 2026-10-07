@@ -30,12 +30,13 @@ export const site: SiteConfig = {
 
   // Frase corta que aparece justo debajo de tu nombre (Hero)
   tagline:
-    "Backend con Spring Boot · Frontend con Angular y React · Base de datos PostgreSQL",
+    "Backend con Spring Boot · Frontend con Angular y Next.js · Base de datos PostgreSQL en Supabase",
 
   // Párrafo "Sobre mí": quién eres y qué buscas.
   // Esto es lo que leen los reclutadores, así que sé concreto.
   summary:
-    "Soy un desarrollador junior apasionado por construir aplicaciones completas, del backend al frontend. Terminé un proyecto full-stack con Spring Boot, Angular y PostgreSQL trabajando con arquitectura orientada a usar en un futuro microservicios. Busco mi primera oportunidad como junior en backend o full stack, donde pueda seguir aprendiendo y aportando desde el día uno.",
+    "Soy un desarrollador junior apasionado por construir aplicaciones completas, del backend al frontend. He hecho algunos proyectos full-stack con Spring Boot, Angular y PostgreSQL " +
+     "trabajando con una arquitectura MVC. Así mismo trabajo con JavaScript y Python. Busco oportunidades como junior en backend o full stack, donde pueda seguir aprendiendo y aportando desde el día uno.",
 
   // Correo de contacto
   email: "erikjarquin20@gmail.com",
