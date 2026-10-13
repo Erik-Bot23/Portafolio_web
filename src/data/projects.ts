@@ -63,7 +63,7 @@ export const projects: Project[] = [
       "detalles interactivos y diseño responsive. Me sirvió para practicar manipulación del DOM, animaciones con CSS y buenas prácticas de diseño web.",
     tech: ["HTML", "CSS", "JavaScript"],
     github: "https://github.com/Erik-Bot23",
-    demo: "https://tu-usuario.github.io/pagina-novia",
+    demo: "https://yanerik.netlify.app",
   },
   {
     id: "agenda-python",
