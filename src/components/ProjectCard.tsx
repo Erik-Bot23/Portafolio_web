@@ -7,6 +7,7 @@
 */
 
 import type { Project } from "@/data/projects";
+import Image from "next/image";
 
 /* Props que recibe el componente: exactamente un proyecto */
 type ProjectCardProps = {
@@ -62,9 +63,11 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.githubRepo1}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-zinc-300 transition-colors hover:text-accent"
+            className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-zinc-300 transition-colors hover:text-accent"
           >
-            Repositorio del backend →
+            Repositorio del backend
+            <Image src="/icons/derecha.png" alt="" aria-hidden="true"
+              width={14} height={14} className="h-3.5 w-3.5 opacity-60 transition-all group-hover/link:translate-x-0.5 group-hover/link:opacity-100" />
           </a>
         )}
         {project.githubRepo2 && (

@@ -10,26 +10,7 @@
 */
 
 import { site } from "@/data/site";
-
-/* Tecnologías que dominas/usas (edítala para añadir o quitar) */
-const SKILLS = [
-  "Java",
-  "Spring Boot",
-  "Angular",
-  "TypeScript",
-  "Next.js",
-  "PostgreSQL",
-  "Supabase",
-  "JavaScript",
-  "Python",
-  "HTML",
-  "CSS",
-  "Tailwind CSS",
-  "Git",
-  "GitHub",
-  "Docker",
-  "Postman"
-];
+import { skillGroups } from "@/data/skills";
 
 /* Lo que estás buscando laboralmente */
 const GOALS = [
@@ -69,18 +50,26 @@ export default function About() {
         </div>
 
         {/* Columna derecha: tecnologías */}
-        <div>
-          <h3 className="mb-3 text-sm font-semibold text-zinc-100">Tecnologías</h3>
-          <div className="flex flex-wrap gap-2">
-            {SKILLS.map((skill) => (
-              <span
-                key={skill}
-                className="rounded-md border border-border bg-surface px-3 py-1 font-mono text-xs text-zinc-300"
-              >
-                {skill}
-              </span>
+        <div className="space-y-5">
+          <h3 className="text-sm font-semibold text-zinc-100">Tecnologías</h3>
+
+            {skillGroups.map((group) => (
+              <div key={group.category}>
+                <p className="mb-2 font-mono text-xs uppercase tracking-widest text-accent">
+                  {group.category}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className="rounded-md border border-border bg-surface px-3 py-1 font-mono text-xs text-zinc-300"
+                      >
+                        {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
-          </div>
         </div>
       </div>
     </section>
