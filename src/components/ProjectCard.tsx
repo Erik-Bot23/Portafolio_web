@@ -1,14 +1,9 @@
 /*
-  components/ProjectCard.tsx
-  --------------------------
   Tarjeta individual de un proyecto.
 
   Es un componente "presentacional": solo recibe un objeto `Project`
   por props y lo pinta. No sabe nada de dónde vienen los datos, de
   forma que se puede reutilizar en cualquier lugar.
-
-  Ejemplo de props:
-    <ProjectCard project={projects[0]} />
 */
 
 import type { Project } from "@/data/projects";
@@ -38,10 +33,16 @@ export default function ProjectCard({ project }: ProjectCardProps) {
       </p>
 
       {/*Detalles de la nueva implementación */}
-      <p className="mt-3 flex-1 text-sm leading-6 text-zinc-400">
-        {project.details1}
-      </p>
-
+      {project.highlights && (
+        <ul className="mt-4 space-y-2">
+          {project.highlights.map((h) => (
+            <li key={h} className="flex items-start gap-2 text-sm leading-6 text-zinc-400">
+              <span aria-hidden="true" className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-accent"/>
+              {h}
+            </li>
+          ))}
+        </ul>
+      )}
       {/* Tecnologías usadas (se renderizan con map sobre el array) */}
       <div className="mt-4 flex flex-wrap gap-2">
         {project.tech.map((tech) => (
@@ -56,14 +57,34 @@ export default function ProjectCard({ project }: ProjectCardProps) {
 
       {/* Enlaces a GitHub y demo en vivo */}
       <div className="mt-5 flex gap-4">
-        {project.github && (
+        {project.githubRepo1 && (
           <a
-            href={project.github}
+            href={project.githubRepo1}
             target="_blank"
             rel="noopener noreferrer"
             className="text-sm font-medium text-zinc-300 transition-colors hover:text-accent"
           >
-            GitHub →
+            Repositorio del backend →
+          </a>
+        )}
+        {project.githubRepo2 && (
+          <a
+            href= {project.githubRepo2}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-zinc-300 transition-colors hover:text-accent"
+          >
+            Repositorio del frontend
+          </a>
+        )}
+        {project.github && (
+          <a
+            href= {project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-zinc-300 transition-colors hover:text-accent"
+          >
+            Repositorio del proyecto
           </a>
         )}
         {project.demo && (

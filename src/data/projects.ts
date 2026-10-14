@@ -1,29 +1,22 @@
 /*
-  src/data/projects.ts
-  --------------------
   Datos de tus proyectos, también centralizados.
 
   Cada proyecto es un objeto con la forma de la interfaz `Project`.
   Esto permite que la sección "Proyectos" se renderice con un simple
-  `projects.map(...)` sin repetir HTML por proyecto.
+  projects.map(...) sin repetir HTML por proyecto.
 
-  IMPORTANTE: edita cada entrada con los datos reales de tus proyectos:
-  título, descripción, tecnologías, link de GitHub y demo en vivo.
-
-  - `github`: link al repositorio (déjalo como `undefined` si no quieres mostrarlo)
-  - `demo`: link a la demo en vivo (puede ser vercel.app, github pages...)
-  - `featured`: si es true, la card se destaca visualmente
+  featured: si es true, la card se destaca visualmente
 */
 
 export type Project = {
   id: string;
   title: string;
-  tagline: string;
   description: string;
-  details1?: string;
-  details2?: string;
+  highlights?: string[];
   tech: string[];
   github?: string;
+  githubRepo1?: string;
+  githubRepo2?: string;
   demo?: string;
   demo1?: string;
   demo2?: string;
@@ -34,61 +27,55 @@ export const projects: Project[] = [
   {
     id: "system-sales",
     title: "ERP de ventas para tiendas (POS)",
-    tagline: "Spring Boot + Angular + PostgreSQL (en Supabase) + Next.js",
     /*
       Describe qué hace, qué aprendiste y qué retos resolviste.
       Los reclutadores valoran "qué hace" más que la lista de tecnologías.
     */
     description:
-      "Aplicación para gestionar ventas construida con una arquitectura MVC con Spring Boot en el backend, " +
-      "una SPA en Angular como cliente para la administración de la tienda y PostgreSQL como base de datos alojada en Supabase. Implementé autenticación, CRUD y comunicación entre servicios por HTTP.",
+      "Sistema completo de punto de venta para una tienda de despensa: caja, cobro, inventario, proveedores, compras y reportes. " + 
+      "Lo construí de punta a punta: backend hecho con Spring Boot con 12 controladores y 73 endpoints REST y autencicación con JWT " +
+      "; SPA en Angular para todo el diseño del frontend. PostgreSQL con 7 migraciones versionadas por flyway. Y se hicieron 301 pruebas automatizadas.",
     /**
      * Detalles de lo que se esta implementando en el proyecto.
      */
-    details1: "Se esta implementando un frontend con Next.js para compras en línea enfocado al cliente, mientras que el frontend con Angular es para la administración de la tienda. " + 
-    "Se usará el mismo backend con Spring Boot y la misma base de datos en Supabase para ambos frontends, habrá diferentes rutas apuntando a cada uno.",
-    tech: ["Spring Boot", "Java", "Angular", "TypeScript", "PostgreSQL", "Docker", "Supabase", "Next.js"],
+    highlights: ["Cobro idempotente: una clave única en la base de datos evita que un doble clic en el botón de cobrar genere dos ventas con el stock descontado dos veces.",
+      "Utilidad real: cada renglón de venta congela el costo del producto al momento de vender, así que comprar más barato mañana no reescribe la ganancia de ayer.",
+      "Inventario que no miente: una compra no suma stock hasta que se confirma, que es cuando la mercancía realmente llegó.",
+      "Reporte de margen por producto ordenado de menor a mayor, que responde la pregunta con la que se decide una despensa: a quién hay que renegociarle el precio de compra.",
+      "La API impide que un usuario se desactive a sí mismo y valida que ningún campo obligatorio se guarde vacío.",
+      "Recuperación de contraseña por la API HTTPS de Resend, porque el hosting bloquea el SMTP saliente y el puerto 587 simplemente no responde."],
+
+    tech: ["Spring Boot 4", "Java 21", "Angular 21", "TypeScript", "PostgreSQL", "Flyway", "Docker", "JWT"],
+
     // Reemplaza con tu repositorio y tu demo (si la tienes)
-    github: "https://github.com/Erik-Bot23",
+    githubRepo1: "https://github.com/ErikSvardook/Compras-Backend.git",
+    githubRepo2: "https://github.com/ErikSvardook/Compras-Frontend-local.git",
     demo1: "https://comprasangular.netlify.app",
-    demo2: "https://comprasangular.netlify.app",
     featured: true,
   },
   {
     id: "pagina-novia",
     title: "Página Web para mi Novia",
-    tagline: "Frontend · HTML + CSS + JavaScript",
+
     description:
-      "Página web personal dedicada a mi novia hecha con JavaScript, HTML y CSS puro. Incluye animaciones, " +
-      "detalles interactivos y diseño responsive. Me sirvió para practicar manipulación del DOM, animaciones con CSS y buenas prácticas de diseño web.",
+      "Página web personal con animaciones, detalles interactivos y diseño responsive, hecho con JavaScript, HTML y CSS puro. " +
+      "Me sirvió para practicar manipulación del DOM, animaciones con CSS y buenas prácticas de diseño web sin un framework.",
+
     tech: ["HTML", "CSS", "JavaScript"],
-    github: "https://github.com/Erik-Bot23",
+
+    github: "https://github.com/ErikSvardook/Pagina-de-novios.git",
     demo: "https://yanerik.netlify.app",
   },
   {
     id: "agenda-python",
     title: "Agenda con Python",
-    tagline: "Python y postgreSQL",
-    description:
-      "Pequeño proyecto en Python para agendar contactos y eventos, con almacenamiento en una base de datos PostgreSQL. Incluye funcionalidades de agregar, editar, eliminar y listar contactos y eventos. Me ayudó a mejorar mis habilidades en Python y SQL.",
-    tech: ["Python", "PostgreSQL"],
-    github: "https://github.com/Erik-Bot23",
-  },
-  {
-    id: "system-order",
-    title: "ERP de ventas para establecimiento de comida (POS)",
-    tagline: "Spring Boot + Angular + PostgreSQL (en Supabase) + Next.js",
-    description:
-      "Esta aplicación esta en proceso, se usará para gestionar ventas enfocadas a un establecimiento de comida y tomará como base el proyecto de ventas para tienda, " +
-      "el cual se refactorizará para adaptarse a las necesidades de un restaurante; tanto el backend con Spring Boot como el frontend con Angular. Y se implementará un frontend con Next.js para compras en línea enfocado al cliente." +
-      " mientras que el frontend con Angular seguirá siendo para la administración, en esta caso del restaurante.",
 
-    details2: "Se esta implmentando un frontend con Next.js para compras en línea enfocado al cliente, mientras que el frontend con Angular es para la administración de la tienda. " + 
-    "Se usará el mismo backend con Spring Boot y la misma base de datos en Supabase para ambos frontends, pero habrá diferentes rutas apuntando a cada uno.",
-    tech: ["Spring Boot", "Java", "Angular", "TypeScript", "PostgreSQL", "Docker", "Supabase", "Next.js"],
-    github: "https://github.com/Erik-Bot23",
-    demo1: "https://comprasangular.netlify.app",
-    demo2: "https://comprasangular.netlify.app",
-    featured: true,
-  }, 
+    description:
+      "Pequeño proyecto en Python para administrar contactos y eventos, con almacenamiento en una base de datos PostgreSQL. Incluye funcionalidades de agregar, editar, eliminar y listar contactos y eventos. " + 
+      "Me ayudó a mejorar mis habilidades en Python y SQL, modelando datos fuera de un framework.",
+
+    tech: ["Python", "PostgreSQL"],
+
+    github: "https://github.com/ErikSvardook/Agenda-Contactos.git",
+  },
 ];
