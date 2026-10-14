@@ -1,6 +1,4 @@
 /*
-  app/layout.tsx
-  --------------
   Layout raíz de la aplicación. Es obligatorio en Next.js (App Router):
   envuelve TODAS las páginas del proyecto.
 
@@ -23,7 +21,7 @@ import { site } from "@/data/site";
 
 /*
   Fuentes servidas desde NUESTRO servidor (self-hosted) con
-  next/font/local. No dependemos de Google Fonts en tiempo de build
+  next/font/local. No dependo de Google Fonts en tiempo de build
   ni de terceros en el navegador, lo que hace el build offline-safe
 
   Las fuentes WOFF2 versionadas están en src/fonts.

@@ -1,6 +1,4 @@
 /*
-  app/page.tsx
-  ------------
   Página principal del portafolio (ruta raíz "/").
 
   En el App Router, cada archivo page.tsx dentro de una carpeta

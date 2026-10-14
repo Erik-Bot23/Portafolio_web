@@ -1,6 +1,4 @@
 /*
-  components/Navbar.tsx
-  ---------------------
   Barra de navegación fija en la parte superior.
 
   Usa anclas (href="#id") para saltar a las secciones de la misma
@@ -8,7 +6,7 @@
   con `scroll-behavior: smooth`.
 
   Nota: este componente es "cliente" tan solo porque usa el hook
-  useState. Lo marcamos con la directiva "use client".
+  useState. Se marca con la directiva "use client".
 */
 "use client";
 

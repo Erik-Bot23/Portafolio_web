@@ -1,14 +1,7 @@
 /*
-  components/Contact.tsx
-  ----------------------
-  Sección "Contacto": cómo llegar a ti.
-
-  Lo mínimo imprescindible: un botón para escribirte por correo y
-  enlaces directos a LinkedIn y GitHub (los que los reclutadores
-  van a querer ver sí o sí).
+  Un botón para escribirte por correo y
+  enlaces directos a LinkedIn y GitHub.
 */
-//Holla, primer commit
-
 import { site } from "@/data/site";
 
 export default function Contact() {

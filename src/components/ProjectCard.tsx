@@ -7,7 +7,32 @@
 */
 
 import type { Project } from "@/data/projects";
-import Image from "next/image";
+
+/**
+ * Flecha decorativa. Se usa como máscara(mask-image) para poder pintarla
+ * con currentColor: así hereda el color del texto y cambia al hacer hover, sin
+ * depender del PNG ni del tema
+ */
+function Arrow(){
+  return (
+    <span 
+      aria-hidden = "true"
+      className = "inline-block h-3 w-3 shrink-0 bg-current transition-transform duration-200 group-hover/link:translate-x-0.5"
+      style={{
+        maskImage: 'url("/icons/derecha.png")',
+        WebkitMaskImage: 'url("/icons/derecha.png")',
+        maskSize: "contain",
+        WebkitMaskSize: "contain",
+        maskRepeat: "no-repeat",
+        WebkitMaskRepeat: "no-repeat",
+        maskPosition: "center",
+        WebkitMaskPosition: "center"
+      }}
+    />
+  );
+}
+
+const LINK = "group/link inline-flex items-center gap-1.5 text-sm font-medium text-zinc-300 transition-colors";
 
 /* Props que recibe el componente: exactamente un proyecto */
 type ProjectCardProps = {
@@ -63,11 +88,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.githubRepo1}
             target="_blank"
             rel="noopener noreferrer"
-            className="group/link inline-flex items-center gap-1.5 text-sm font-medium text-zinc-300 transition-colors hover:text-accent"
+            className= {`${LINK} text-zinc-300 hover:text-accent`}
           >
             Repositorio del backend
-            <Image src="/icons/derecha.png" alt="" aria-hidden="true"
-              width={14} height={14} className="h-3.5 w-3.5 opacity-60 transition-all group-hover/link:translate-x-0.5 group-hover/link:opacity-100" />
+            <Arrow/>
           </a>
         )}
         {project.githubRepo2 && (
@@ -75,9 +99,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href= {project.githubRepo2}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-zinc-300 transition-colors hover:text-accent"
+            className= {`${LINK} text-zinc-300 hover:text-accent`}
           >
             Repositorio del frontend
+            <Arrow/>
           </a>
         )}
         {project.github && (
@@ -85,9 +110,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href= {project.github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-zinc-300 transition-colors hover:text-accent"
+            className= {`${LINK} text-zinc-300 hover:text-accent`}
           >
             Repositorio del proyecto
+            <Arrow/>
           </a>
         )}
         {project.demo && (
@@ -95,9 +121,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.demo}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-accent transition-colors hover:text-accent-light"
+            className= {`${LINK} text-zinc-300 hover:text-accent`}
           >
-            Demo en vivo →
+            Demo en vivo
+            <Arrow/>
           </a>
         )}
         {project.demo1 && (
@@ -105,9 +132,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.demo1}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-accent transition-colors hover:text-accent-light"
+             className= {`${LINK} text-zinc-300 hover:text-accent`}
           >
-            Ventas locales →
+            Ventas locales
+           <Arrow/>
           </a>
         )}
         {project.demo2 && (
@@ -115,9 +143,10 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             href={project.demo2}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-sm font-medium text-accent transition-colors hover:text-accent-light"
+             className= {`${LINK} text-zinc-300 hover:text-accent`}
           >
-            Ventas en línea →
+            Ventas en línea
+            <Arrow/>
           </a>
         )}
       </div>

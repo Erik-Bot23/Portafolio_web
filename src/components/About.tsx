@@ -1,14 +1,3 @@
-/*
-  components/About.tsx
-  --------------------
-  Sección "Sobre mí": quién eres y qué buscas.
-
-  Como quieres optar a un puesto junior (backend o frontend), es
-  importante dejar claro qué tecnologías manejas y qué estás
-  buscando. La lista de habilidades se renderiza con un map() sobre
-  un array, evitando repetir etiquetas.
-*/
-
 import { site } from "@/data/site";
 import { skillGroups } from "@/data/skills";
 

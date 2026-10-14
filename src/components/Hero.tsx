@@ -1,11 +1,9 @@
 /*
-  components/Hero.tsx
-  -------------------
   Sección principal (parte alta de la landing).
 
-  Aquí va el "elevator pitch": tu nombre, el rol que buscas y una
-  frase corta. Es la primera impresión que se lleva quien visita
-  tu página, por eso debe ser clara en menos de 5 segundos.
+  Aquí va el "elevator pitch": el nombre, el rol que busco y una
+  frase corta. Es la primera impresión que se llevan quienes visitan
+  la página, por eso debe ser clara en menos de 5 segundos.
 */
 import { site } from "@/data/site";
 

@@ -1,6 +1,4 @@
 /*
-  components/Projects.tsx
-  -----------------------
   Sección "Proyectos".
 
   Es un componente que "pide" datos (importa projects de

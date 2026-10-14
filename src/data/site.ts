@@ -1,14 +1,10 @@
 /*
-  src/data/site.ts
-  ----------------
   Datos personales del portafolio centralizados en UN SOLO archivo.
 
   Esta es la forma recomendada en Next.js: en lugar de "hardcodear"
-  tu nombre, correo o links en cada componente, los declaras aquí y
-  los importas donde los necesites. Así, si cambias un link, solo
-  tocas este archivo.
-
-  IMPORTANTE: edita este archivo con tus datos reales.
+  nombre, correo o links en cada componente, se declaran aquí y
+  los importas donde se necesiten. Así, si cambias un link, solo se
+  toca este archivo.
 */
 
 export type SiteConfig = {

@@ -1,6 +1,4 @@
 /*
-  components/Footer.tsx
-  ---------------------
   Pie de página: pequeño, discreto, con el año actual y enlaces
   rápidos a las redes sociales.
 */
