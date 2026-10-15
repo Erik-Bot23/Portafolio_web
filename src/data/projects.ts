@@ -57,7 +57,7 @@ export const projects: Project[] = [
   },
   {
     id: "pagina-novia",
-    title: "Página Web para mi Novia",
+    title: "Página Web personal",
 
     description:
       "Página web personal con animaciones, detalles interactivos y diseño responsive, hecho con JavaScript, HTML y CSS puro. " +
@@ -73,7 +73,7 @@ export const projects: Project[] = [
     title: "Agenda con Python",
 
     description:
-      "Pequeño proyecto en Python para administrar contactos y eventos, con almacenamiento en una base de datos PostgreSQL. Incluye funcionalidades de agregar, editar, eliminar y listar contactos y eventos. " + 
+      "Proyecto en Python para administrar contactos y eventos, con almacenamiento en una base de datos PostgreSQL. Incluye funcionalidades de agregar, editar, eliminar y listar contactos y eventos. " + 
       "Me ayudó a mejorar mis habilidades en Python y SQL, modelando datos fuera de un framework.",
 
     tech: ["Python", "PostgreSQL"],
