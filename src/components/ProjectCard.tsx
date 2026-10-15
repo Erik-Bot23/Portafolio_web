@@ -90,7 +90,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             rel="noopener noreferrer"
             className= {`${LINK} text-zinc-300 hover:text-accent`}
           >
-            Repositorio del backend
+            Spring Boot
             <Arrow/>
           </a>
         )}
@@ -101,7 +101,18 @@ export default function ProjectCard({ project }: ProjectCardProps) {
             rel="noopener noreferrer"
             className= {`${LINK} text-zinc-300 hover:text-accent`}
           >
-            Repositorio del frontend
+            Angular
+            <Arrow/>
+          </a>
+        )}
+        {project.githubRepo3 && (
+          <a
+            href= {project.githubRepo3}
+            target="_blank"
+            rel="noopener noreferrer"
+            className= {`${LINK} text-zinc-300 hover:text-accent`}
+          >
+            Docker
             <Arrow/>
           </a>
         )}

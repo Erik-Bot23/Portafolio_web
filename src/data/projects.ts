@@ -17,6 +17,7 @@ export type Project = {
   github?: string;
   githubRepo1?: string;
   githubRepo2?: string;
+  githubRepo3?: string;
   demo?: string;
   demo1?: string;
   demo2?: string;
@@ -50,6 +51,7 @@ export const projects: Project[] = [
     // Reemplaza con tu repositorio y tu demo (si la tienes)
     githubRepo1: "https://github.com/ErikSvardook/Compras-Backend.git",
     githubRepo2: "https://github.com/ErikSvardook/Compras-Frontend-local.git",
+    githubRepo3: "https://github.com/ErikSvardook/Compras-Docker.git",
     demo1: "https://comprasangular.netlify.app",
     featured: true,
   },
