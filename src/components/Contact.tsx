@@ -21,9 +21,10 @@ export default function Contact() {
           como a preguntas sobre mis proyectos.
         </p>
 
-        {/* Botón principal: abrir el cliente de correo */}
+        {/* Botón principal: abrir el cliente de correo 
+          href={`https://mail.google.com/mail/?view=cm&fs=1&to=${site.email}`}*/}
         <a
-          href={`https://mail.google.com/mail/?view=cm&fs=1&to=${site.email}`}
+          href={`https://mailto:${site.email}`}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-6 inline-flex h-11 items-center justify-center rounded-lg bg-accent px-8 text-sm font-semibold text-zinc-950 transition-colors hover:bg-accent-light"

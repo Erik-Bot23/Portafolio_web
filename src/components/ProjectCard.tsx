@@ -58,7 +58,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         {project.description}
       </p>
 
-      {/*Detalles de la nueva implementación */}
+      {/*&& es lo que evita el hueco invisible */}
       {project.highlights && (
         <ul className="mt-4 space-y-2">
           {project.highlights.map((h) => (

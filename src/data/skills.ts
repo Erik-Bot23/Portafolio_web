@@ -10,11 +10,11 @@ export type SkillGroup = {
 export const skillGroups: SkillGroup[] = [
     {
         category: "Backend",
-        items: ["Java", "Spring Boot", "Spring Data JPA", "Spring Security", "Flyway"],
+        items: ["Java 21", "Spring Boot", "Spring Data JPA", "Spring Security", "Flyway"],
     },
     {
         category: "Frontend",
-        items: ["Angular", "Next.js", "TypeScript", "Tailwind"],
+        items: ["Angular", "Next.js", "TypeScript", "Tailwind CSS", "CSS", "HTML"],
     },
     {
         category: "Datos",
@@ -26,6 +26,6 @@ export const skillGroups: SkillGroup[] = [
     },
     {
         category: "Otros",
-        items: ["HTML", "CSS", "JavaScript"],
+        items: ["Python", "JavaScript"],
     },
 ];
